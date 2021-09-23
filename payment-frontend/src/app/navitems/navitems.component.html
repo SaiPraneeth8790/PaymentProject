@@ -1,0 +1,10 @@
+<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+    <li class="nav-item" *ngFor="let item of navitems;let i= index">
+      <a class="nav-link" [routerLink]="item.link"><b>{{item.text}}</b></a>
+    </li>
+    <!--<li class="nav-item">
+      <a class="nav-link" href="#">{{currentDate|date:'yyyy/MM/dd hh:mm:ss'}}</a>
+    </li>-->
+    
+  </ul>

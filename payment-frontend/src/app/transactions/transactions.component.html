@@ -1,0 +1,41 @@
+<br>
+<button type="button" (click)="onSubmit()" class="btn btn-primary btn-danger btn-sm">Go to Dashboard</button>
+<br>
+<br>
+<table class="table table-striped">
+  <thead>
+    <tr class="content">
+      <th scope="col">Transaction Id</th>
+      <th scope="col">Transfer Date</th>
+      <th scope="col">Sender BIC</th>
+      <th scope="col">Receiver BIC</th>
+      <th scope="col">Receiver Account No</th>
+      <th scope="col">Receiver Account Name</th>
+      <th scope="col">Transfer Amount</th>
+      <th scope="col">Transfer Fees</th>
+      <th scope="col">Transfer type </th>
+      <th scope="col">Message code</th>
+      <th scope="col">Currency Code</th> 
+    </tr>
+  </thead>
+  <tbody>
+    <tr  *ngFor="let t of alltransactions.reverse()">
+      <td class="data">{{t.transactionid}}</td>
+      <td class="data">{{t.transferdate}}</td>
+      <td class="data">{{t.senderBIC.bic}}</td>
+      <td class="data">{{t.receiverBIC.bic}}</td>
+      <td class="data">{{t.receiveraccountholdernumber}}</td>
+      <td class="data">{{t.receiveraccountholdername}}</td>
+      <td class="data">{{t.inramount}}</td>
+      <td class="data">{{t.transferfees}}</td>
+      <td class="data">{{t.transfertypecode.transfertypecode}}</td>
+      <td class="data">{{t.messagecode.messagecode}}</td>
+      <td class="data">{{t.currencycode.currencycode}}</td>
+   </tr>  
+    </tbody>
+  </table>
+
+
+
+  
+  
